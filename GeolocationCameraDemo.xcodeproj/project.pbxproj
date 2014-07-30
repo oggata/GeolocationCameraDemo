@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F328FBD619889758006C74CE /* CameraSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F328FBD519889758006C74CE /* CameraSessionController.swift */; };
+		F328FBD819889774006C74CE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F328FBD719889774006C74CE /* LocationManager.swift */; };
+		F328FBDA198898F2006C74CE /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F328FBD9198898F2006C74CE /* CoreImage.framework */; };
+		F328FBDC198898F7006C74CE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F328FBDB198898F7006C74CE /* AVFoundation.framework */; };
+		F358F2091988A0FC002FFE0D /* penguin1.png in Resources */ = {isa = PBXBuildFile; fileRef = F358F2081988A0FC002FFE0D /* penguin1.png */; };
+		F397F30B1985E3D20085F679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397F30A1985E3D20085F679 /* AppDelegate.swift */; };
+		F397F30D1985E3D20085F679 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397F30C1985E3D20085F679 /* ViewController.swift */; };
+		F397F3101985E3D20085F679 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F397F30E1985E3D20085F679 /* Main.storyboard */; };
+		F397F3121985E3D20085F679 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F397F3111985E3D20085F679 /* Images.xcassets */; };
+		F397F31E1985E3D20085F679 /* GeolocationCameraDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397F31D1985E3D20085F679 /* GeolocationCameraDemoTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F397F3181985E3D20085F679 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F397F2FD1985E3D20085F679 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F397F3041985E3D20085F679;
+			remoteInfo = GeolocationCameraDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F328FBD519889758006C74CE /* CameraSessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraSessionController.swift; sourceTree = "<group>"; };
+		F328FBD719889774006C74CE /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		F328FBD9198898F2006C74CE /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		F328FBDB198898F7006C74CE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F358F2081988A0FC002FFE0D /* penguin1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = penguin1.png; sourceTree = "<group>"; };
+		F397F3051985E3D20085F679 /* GeolocationCameraDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeolocationCameraDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F397F3091985E3D20085F679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F397F30A1985E3D20085F679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F397F30C1985E3D20085F679 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F397F30F1985E3D20085F679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F397F3111985E3D20085F679 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F397F3171985E3D20085F679 /* GeolocationCameraDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeolocationCameraDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F397F31C1985E3D20085F679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F397F31D1985E3D20085F679 /* GeolocationCameraDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationCameraDemoTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F397F3021985E3D20085F679 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F328FBDC198898F7006C74CE /* AVFoundation.framework in Frameworks */,
+				F328FBDA198898F2006C74CE /* CoreImage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F397F3141985E3D20085F679 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F397F2FC1985E3D20085F679 = {
+			isa = PBXGroup;
+			children = (
+				F328FBDB198898F7006C74CE /* AVFoundation.framework */,
+				F328FBD9198898F2006C74CE /* CoreImage.framework */,
+				F397F3071985E3D20085F679 /* GeolocationCameraDemo */,
+				F397F31A1985E3D20085F679 /* GeolocationCameraDemoTests */,
+				F397F3061985E3D20085F679 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F397F3061985E3D20085F679 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F397F3051985E3D20085F679 /* GeolocationCameraDemo.app */,
+				F397F3171985E3D20085F679 /* GeolocationCameraDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F397F3071985E3D20085F679 /* GeolocationCameraDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F397F30A1985E3D20085F679 /* AppDelegate.swift */,
+				F358F2081988A0FC002FFE0D /* penguin1.png */,
+				F328FBD519889758006C74CE /* CameraSessionController.swift */,
+				F328FBD719889774006C74CE /* LocationManager.swift */,
+				F397F30C1985E3D20085F679 /* ViewController.swift */,
+				F397F30E1985E3D20085F679 /* Main.storyboard */,
+				F397F3111985E3D20085F679 /* Images.xcassets */,
+				F397F3081985E3D20085F679 /* Supporting Files */,
+			);
+			path = GeolocationCameraDemo;
+			sourceTree = "<group>";
+		};
+		F397F3081985E3D20085F679 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F397F3091985E3D20085F679 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F397F31A1985E3D20085F679 /* GeolocationCameraDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				F397F31D1985E3D20085F679 /* GeolocationCameraDemoTests.swift */,
+				F397F31B1985E3D20085F679 /* Supporting Files */,
+			);
+			path = GeolocationCameraDemoTests;
+			sourceTree = "<group>";
+		};
+		F397F31B1985E3D20085F679 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F397F31C1985E3D20085F679 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F397F3041985E3D20085F679 /* GeolocationCameraDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F397F3211985E3D20085F679 /* Build configuration list for PBXNativeTarget "GeolocationCameraDemo" */;
+			buildPhases = (
+				F397F3011985E3D20085F679 /* Sources */,
+				F397F3021985E3D20085F679 /* Frameworks */,
+				F397F3031985E3D20085F679 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeolocationCameraDemo;
+			productName = GeolocationCameraDemo;
+			productReference = F397F3051985E3D20085F679 /* GeolocationCameraDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F397F3161985E3D20085F679 /* GeolocationCameraDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F397F3241985E3D20085F679 /* Build configuration list for PBXNativeTarget "GeolocationCameraDemoTests" */;
+			buildPhases = (
+				F397F3131985E3D20085F679 /* Sources */,
+				F397F3141985E3D20085F679 /* Frameworks */,
+				F397F3151985E3D20085F679 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F397F3191985E3D20085F679 /* PBXTargetDependency */,
+			);
+			name = GeolocationCameraDemoTests;
+			productName = GeolocationCameraDemoTests;
+			productReference = F397F3171985E3D20085F679 /* GeolocationCameraDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F397F2FD1985E3D20085F679 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Fumitoshi Ogata";
+				TargetAttributes = {
+					F397F3041985E3D20085F679 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					F397F3161985E3D20085F679 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = F397F3041985E3D20085F679;
+					};
+				};
+			};
+			buildConfigurationList = F397F3001985E3D20085F679 /* Build configuration list for PBXProject "GeolocationCameraDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F397F2FC1985E3D20085F679;
+			productRefGroup = F397F3061985E3D20085F679 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F397F3041985E3D20085F679 /* GeolocationCameraDemo */,
+				F397F3161985E3D20085F679 /* GeolocationCameraDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F397F3031985E3D20085F679 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F358F2091988A0FC002FFE0D /* penguin1.png in Resources */,
+				F397F3101985E3D20085F679 /* Main.storyboard in Resources */,
+				F397F3121985E3D20085F679 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F397F3151985E3D20085F679 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F397F3011985E3D20085F679 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F328FBD819889774006C74CE /* LocationManager.swift in Sources */,
+				F397F30D1985E3D20085F679 /* ViewController.swift in Sources */,
+				F328FBD619889758006C74CE /* CameraSessionController.swift in Sources */,
+				F397F30B1985E3D20085F679 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F397F3131985E3D20085F679 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F397F31E1985E3D20085F679 /* GeolocationCameraDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F397F3191985E3D20085F679 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F397F3041985E3D20085F679 /* GeolocationCameraDemo */;
+			targetProxy = F397F3181985E3D20085F679 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F397F30E1985E3D20085F679 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F397F30F1985E3D20085F679 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F397F31F1985E3D20085F679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F397F3201985E3D20085F679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F397F3221985E3D20085F679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = GeolocationCameraDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F397F3231985E3D20085F679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = GeolocationCameraDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F397F3251985E3D20085F679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GeolocationCameraDemo.app/GeolocationCameraDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GeolocationCameraDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		F397F3261985E3D20085F679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GeolocationCameraDemo.app/GeolocationCameraDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GeolocationCameraDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F397F3001985E3D20085F679 /* Build configuration list for PBXProject "GeolocationCameraDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F397F31F1985E3D20085F679 /* Debug */,
+				F397F3201985E3D20085F679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F397F3211985E3D20085F679 /* Build configuration list for PBXNativeTarget "GeolocationCameraDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F397F3221985E3D20085F679 /* Debug */,
+				F397F3231985E3D20085F679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F397F3241985E3D20085F679 /* Build configuration list for PBXNativeTarget "GeolocationCameraDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F397F3251985E3D20085F679 /* Debug */,
+				F397F3261985E3D20085F679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F397F2FD1985E3D20085F679 /* Project object */;
+}
