@@ -10,6 +10,9 @@ import UIKit
 import AVFoundation
 import CoreMedia
 import CoreImage
+import AssetsLibrary
+import CoreLocation
+import ImageIO
 
 @objc protocol CameraSessionControllerDelegate {
     @optional func cameraSessionDidOutputSampleBuffer(sampleBuffer: CMSampleBuffer!)
@@ -166,8 +169,10 @@ class CameraSessionController: NSObject, AVCaptureVideoDataOutputSampleBufferDel
                 var imageData: NSData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer?)
                 var image: UIImage = UIImage(data: imageData)
 
+                /*
                 //UIGraphicsここから開始
                 UIGraphicsBeginImageContext(image.size)
+                //(UIImageのdrawInRectメソッドを使うと上下逆さまにならない)<->CGContextDrawImageだと逆になる
                 image.drawInRect(CGRectMake(0,0,image.size.width,image.size.height))
                 
                 //コンテキストを作成
@@ -175,8 +180,9 @@ class CameraSessionController: NSObject, AVCaptureVideoDataOutputSampleBufferDel
                 
                 //合成する画像を用意する
                 var targetImg  = UIImage(named:"penguin1.png")
-                var targetRect = CGRectMake(0,0,145,195)
-                CGContextDrawImage(drawCtxt,targetRect,targetImg.CGImage)
+                var targetRect = CGRectMake(0,0,145*3,195*3)
+                //CGContextDrawImage(drawCtxt,targetRect,targetImg.CGImage)
+                targetImg.drawInRect(targetRect)
 
                 //イメージを合成する
                 var drawedImage = UIGraphicsGetImageFromCurrentImageContext()
@@ -186,9 +192,44 @@ class CameraSessionController: NSObject, AVCaptureVideoDataOutputSampleBufferDel
                 
                 //結果を詰める
                 image = drawedImage
+                */
                 
                 //カメラロールに画像を保存する
-                UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
+                //(このメソッドを使用するとメタデータは保存されない)
+                //UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
+
+                //GPSにWaikikiBeachの座標をセットする
+                var gps = NSMutableDictionary()
+                gps.setObject(1111,forKey:kCGImagePropertyGPSDateStamp)
+                gps.setObject(1111,forKey:kCGImagePropertyGPSTimeStamp)
+                gps.setObject("N",forKey:kCGImagePropertyGPSLatitudeRef)
+                gps.setObject(21.275468,forKey:kCGImagePropertyGPSLatitude)
+                gps.setObject("W",forKey:kCGImagePropertyGPSLongitudeRef)
+                gps.setObject(157.825294,forKey:kCGImagePropertyGPSLongitude)
+                gps.setObject(0,forKey:kCGImagePropertyGPSAltitudeRef)
+                gps.setObject(0,forKey:kCGImagePropertyGPSAltitude)
+
+                //EXIF情報を作成する
+                var exif = NSMutableDictionary() 
+                
+                //写真のコメントをセットする
+                exif.setObject("I love Waikiki Beach",forKey:kCGImagePropertyExifUserComment)
+                
+                //GPS情報をセットする
+                exif.setObject(gps,forKey:kCGImagePropertyGPSDictionary);
+                
+                var metaData = NSMutableDictionary()
+                metaData.setObject(exif,forKey:kCGImagePropertyExifDictionary)
+
+                //メタデータを保存するためにはAssetsLibraryを使用する
+                var library : ALAssetsLibrary = ALAssetsLibrary()
+
+                //writeImageDataToSavedPhotosAlbum : UIImage
+                library.writeImageToSavedPhotosAlbum(image.CGImage,metadata: metaData, completionBlock:{
+                    (assetURL: NSURL!, error: NSError!) -> Void in
+                    println("EDQueueResultSuccess")
+                })
+              
             })
         })
     }

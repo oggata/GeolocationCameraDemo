@@ -23,7 +23,7 @@ class ViewController: UIViewController, CameraSessionControllerDelegate {
         self.setupPreviewLayer()
         
         //位置情報を取得する
-        self.mLocationController = LocationController()
+        //self.mLocationController = LocationController()
     }
     
     override func viewWillAppear(animated: Bool) {
